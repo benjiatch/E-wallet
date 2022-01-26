@@ -2,7 +2,9 @@
   <div class="home"> 
       <HeadingComponents />
       <BaseCard />
-      <BaseButton buttonMessage="Add card"/>
+      <a @click="addCard = 'add-card'">
+        <BaseButton buttonMessage="Add-card" />
+      </a>
   </div>
 </template>
 
@@ -16,7 +18,12 @@ export default {
     BaseCard,
     HeadingComponents,
     BaseButton,
-  }
+  },
+
+  name: 'App',
+  data(){return{
+    addCard: 'add-card'
+  }}
 
 
 }
