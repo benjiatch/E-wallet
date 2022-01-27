@@ -5,15 +5,15 @@
 
    <form @Submit.prevent> 
      <label for="card-number">Card number</label> 
-     <input id="card-numnber" type="text" placeholder="XXXX XXXX XXXX XXXX">
+     <input v-model="cardNumber" id="card-numnber" type="text" placeholder="XXXX XXXX XXXX XXXX">
      
      <label for="card-name">Cardholder name</label>
-     <input id="card-name" type="text" placeholder="Firstname Lastname">    
+     <input v-model="cardName" id="card-name" type="text" placeholder="Firstname Lastname">    
      
      <div class="month-year">
       <div class="month">
         <label for="Month">Month</label>
-        <select name="month" id="month">
+        <select v-model="cardMonth" name="month" id="month">
           <option value="01">01</option>
           <option value="02">02</option>
           <option value="03">03</option>
@@ -35,7 +35,7 @@
 
      <div class="year">
        <label for="year">Year</label>
-       <select name="year" id="year">
+       <select v-model="cardYear" name="year" id="year">
          <option value="21">21</option>
          <option value="22">22</option>
          <option value="23">23</option>
@@ -44,7 +44,7 @@
 
      </div>
      <label for="vendor">Vendor</label>
-     <select name="vendor" id="vendor">
+     <select v-model="cardVendor" name="vendor" id="vendor">
        <option value="Bitcoin">Bitcoin Inc</option>
        <option value="Blockchain">Blockchain</option>
        <option value="Evil">Evil Corp</option>
@@ -52,7 +52,7 @@
 
      </select>
 
-     <BaseButton buttonMessage="add card" />
+     <BaseButton  buttonMessage="add card" />
      <BaseButton buttonMessage="back to cards" />
    </form>
 </div>
@@ -63,11 +63,25 @@
 import HeadingComponents from "@/components/HeadingComponents.vue";
 import BaseCard from "@/components/BaseCard.vue";
 import BaseButton from "@/components/BaseButton.vue";
+
 export default {  
   components:{
     HeadingComponents,
     BaseCard,
     BaseButton,
+  },
+  data(){
+    return{
+      cardNumber: '',
+      cardName: '',
+      cardMonth: 'MM',
+      cardYear: 'YY',
+      cardVendor: '',
+    }
+  },
+
+  methods:{
+
   }
 
 }
