@@ -3,7 +3,7 @@
 
         <article class="chip-logo">
             <img src="@/assets/chip.svg" alt="chip image">
-            <img src="@/assets/bitcoin.svg" alt="evil">
+            <img src="@/assets/bitcoin.svg" alt="bitcoin">
         </article>
         
         <article class="number-name-date">

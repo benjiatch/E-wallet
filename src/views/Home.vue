@@ -1,10 +1,9 @@
 <template>
   <div class="home"> 
-      <HeadingComponents />
+      <HeadingComponents mainHeading="E-wallet" secondaryHeading="active card"/>
       <BaseCard />
-      <a @click="addCard = 'add-card'">
-        <BaseButton buttonMessage="Add-card" />
-      </a>
+      <BaseButton buttonMessage="Add card" />
+      
   </div>
 </template>
 
@@ -14,7 +13,7 @@ import HeadingComponents from "@/components/HeadingComponents.vue";
 import BaseButton from "@/components/BaseButton.vue";
 
 export default {
-  components: {
+  components:{
     BaseCard,
     HeadingComponents,
     BaseButton,
